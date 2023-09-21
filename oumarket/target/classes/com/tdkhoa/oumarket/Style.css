@@ -1,0 +1,71 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 23, 2023, 3:27:57 PM
+    Author     : hung
+*/
+VBox {
+    -fx-background-color: lightblue;
+    -fx-font-family: Tahoma;
+    -fx-padding: 1;
+    -fx-spacing: 1;
+    -fx-alignment: CENTER;
+    
+}
+
+
+
+Text.Subject {
+    -fx-font-size: 20;
+    -fx-fill: red;
+    -fx-stroke: gold;
+    -fx-stroke-width: 3;
+}
+
+Text.OU {
+    -fx-font-size: 30;
+    -fx-fill: #FF4500;
+    -fx-stroke: gold;
+    -fx-stroke-width: 3;
+}
+
+ 
+HBox {
+    -fx-spacing: 5;
+}
+
+ 
+
+Button {
+    -fx-background-color: #4682B4;
+    -fx-text-fill: white;
+}
+Button.h1{
+    -fx-background-color: #5F9EA0;
+    -fx-text-fill: white;
+    
+}
+
+Button.h2{
+    -fx-background-color: #6495ED;
+    -fx-text-fill: pink;
+    -fx-font-size: 14;
+    -fx-stroke-width: 30;
+    -fx-font-bold: 10;
+     
+    
+}
+Button.h3{
+    -fx-background-color: #DC143C;
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+   
+}
+Button.h4{
+    -fx-background-color: #00FF00;
+    -fx-text-fill: white;
+    -fx-font-size: 20;
+   
+}

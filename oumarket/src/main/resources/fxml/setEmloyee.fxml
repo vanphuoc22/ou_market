@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tdkhoa.oumarket.AddEmployeeController">
+   <children>
+      <VBox fx:id="sceneVBox" layoutX="-7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="611.0" stylesheets="@setProducts.css">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="OU" text="OU MARKET ">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Text>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="Subject" text="THÊM NHÂN VIÊN">
+               <VBox.margin>
+                  <Insets bottom="40.0" top="15.0" />
+               </VBox.margin>
+            </Text>
+            <HBox prefHeight="35.0" prefWidth="600.0">
+               <VBox.margin>
+                  <Insets left="30.0" />
+               </VBox.margin>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tên nhân viên: ">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="nameEmployee" prefHeight="25.0" prefWidth="279.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets left="340.0" top="20.0" />
+               </VBox.margin>
+               <children>
+                  <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#closeView" prefHeight="58.0" prefWidth="94.0" styleClass="h3" text="HỦY " />
+                  <Button fx:id="btnConfirm" mnemonicParsing="false" onAction="#addEmployee" prefHeight="57.0" prefWidth="135.0" styleClass="h4" text="XÁC NHẬN " />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

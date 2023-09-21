@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="sceneVBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="584.0" prefWidth="1168.0" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tdkhoa.oumarket.PrimaryController">
+   <children>
+      <TabPane prefHeight="670.0" prefWidth="1135.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Thanh toán">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="489.0" prefWidth="1098.0">
+                     <children>
+                        <HBox id="h1" layoutX="-1.0" layoutY="42.0" prefHeight="35.0" prefWidth="1137.0" styleClass="v1">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search: ">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin></Text>
+                              <TextField fx:id="txtSearch">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Chi nhánh: " />
+                              <TextField />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tên NV: " />
+                              <TextField fx:id="viewUser" />
+                           </children>
+                           <padding>
+                              <Insets top="10.0" />
+                           </padding>
+                        </HBox>
+                        <TableView fx:id="tbShowProducts" layoutY="78.0" prefHeight="199.0" prefWidth="563.0" />
+                        <Text layoutX="16.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Số điện thoại:" />
+                        <TextField fx:id="txtPhone" layoutX="96.0" layoutY="292.0" prefColumnCount="0" prefHeight="23.0" prefWidth="124.0" />
+                        <Text layoutX="224.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tiền khách đưa: " wrappingWidth="93.46173095703125" />
+                        <TextField fx:id="txtTienKhachDua" disable="true" layoutX="313.0" layoutY="292.0" text="0" />
+                        <Text disable="true" layoutX="13.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tiền trả khách: " />
+                        <TextField fx:id="txtTienTraKhach" disable="true" layoutX="96.0" layoutY="336.0" prefHeight="23.0" prefWidth="123.0" text="0" />
+                        <Text layoutX="254.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tổng: " />
+                        <TextField fx:id="txtTotal" disable="true" layoutX="313.0" layoutY="335.0" />
+                        <Button layoutX="1027.0" layoutY="464.0" mnemonicParsing="false" onAction="#savePay" prefHeight="56.0" prefWidth="139.0" styleClass="h4" text="Thanh Toán" />
+                        <Button layoutX="814.0" layoutY="466.0" mnemonicParsing="false" onAction="#refreshCart" prefHeight="58.0" prefWidth="178.0" styleClass="h3" text="REFRESH" />
+                        <TableView fx:id="tbShowOrdersDetail" layoutX="616.0" layoutY="78.0" prefHeight="369.0" prefWidth="551.0" />
+                        <HBox prefHeight="58.0" prefWidth="917.0">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="OU" text="OU MARKET " textAlignment="CENTER" wrappingWidth="474.5574035644531">
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" left="250.0" top="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Hàng hóa">
+            <content>
+              <AnchorPane prefHeight="269.0" prefWidth="528.0">
+                     <children>
+                        <TableView fx:id="tbProducts" layoutX="1.0" prefHeight="371.0" prefWidth="645.0" />
+                        <Button fx:id="btnAddSP" layoutX="694.0" layoutY="269.0" mnemonicParsing="false" onAction="#viewAddProduct" prefHeight="102.0" prefWidth="139.0" text="THÊM SẢN PHẨM " />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Nhân viên">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tbEmployees" prefHeight="363.0" prefWidth="480.0" />
+                        <Button fx:id="btnAddEmp" layoutX="504.0" layoutY="123.0" mnemonicParsing="false" onAction="#viewAddEmployee" prefHeight="102.0" prefWidth="139.0" text="THÊM NHÂN VIÊN " />
+
+                        <TableView fx:id="tbEmployees" layoutY="7.0" prefHeight="371.0" prefWidth="645.0" />
+                        <Button fx:id="btnAddEmp" layoutX="694.0" layoutY="269.0" mnemonicParsing="false" onAction="#viewAddEmployee" prefHeight="102.0" prefWidth="139.0" text="THÊM NHÂN VIÊN " />
+
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Danh mục">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tbCategories" prefHeight="371.0" prefWidth="645.0" />
+                        <Button fx:id="btnAddCate" layoutX="694.0" layoutY="269.0" mnemonicParsing="false" onAction="#viewAddCategory" prefHeight="102.0" prefWidth="139.0" text="THÊM DANH MỤC " />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Hóa đơn">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tbOrders" prefHeight="371.0" prefWidth="645.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Khách hàng">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tbCustomers" prefHeight="371.0" prefWidth="645.0" />
+                        <Button fx:id="btnAddCustomer" layoutX="696.0" layoutY="269.0" mnemonicParsing="false" onAction="#viewAddCustomer" prefHeight="102.0" prefWidth="139.0" text="THÊM KHÁCH HÀNG" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Khuyến Mãi">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tbPromotions" prefHeight="371.0" prefWidth="645.0" />
+                        <Button fx:id="btnAddPromotion" layoutX="695.0" layoutY="269.0" mnemonicParsing="false" onAction="#viewAddPromotion" prefHeight="102.0" prefWidth="139.0" text="Tạo mã khuyến mãi" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </TabPane>
+   </children>
+</VBox>
